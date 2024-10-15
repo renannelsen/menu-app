@@ -7,10 +7,17 @@ RSpec.describe 'MenuItems', type: :request do
       MenuItem.create(name: 'Fries')
     end
 
-    it 'returns all menu items' do
-      get '/menu_items'
+    it 'returns success status' do
       expect(response).to have_http_status(200)
+    end
+
+    it 'returns correct menu count' do
       expect(JSON.parse(response.body).size).to eq(2)
+    end
+
+    it 'returns correct menu names and prices' do
+      expect(JSON.parse(response.body).first['name']).to eq('Burger')
+      expect(JSON.parse(response.body).second['name']).to eq('Fries')
     end
   end
 end
