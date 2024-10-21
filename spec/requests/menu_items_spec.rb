@@ -5,6 +5,7 @@ RSpec.describe 'MenuItems', type: :request do
     before do
       MenuItem.create(name: 'Burger')
       MenuItem.create(name: 'Fries')
+      get '/menu_items'
     end
 
     it 'returns success status' do
