@@ -3,8 +3,9 @@ require 'rails_helper'
 RSpec.describe 'Menus', type: :request do
   describe 'GET /index' do
     before do
-      Menu.create(name: 'BBQ Ribs')
-      Menu.create(name: 'Roast Duck')
+      restaurant = Restaurant.create!(name: 'Super Place')
+      restaurant.menus.create!(name: 'BBQ Ribs')
+      restaurant.menus.create!(name: 'Roast Duck')
       get '/menus'
     end
 

@@ -1,8 +1,12 @@
 require 'rails_helper'
 
 RSpec.describe Menu, type: :model do
+  before do
+    @restaurant = Restaurant.create!(name: 'Super Place')
+  end
+
   it 'is valid with valid attributes' do
-    menu = Menu.new(name: 'Steak Dinner')
+    menu = Menu.new(name: 'Steak Dinner', restaurant: @restaurant)
     expect(menu).to be_valid
   end
 
@@ -13,9 +17,9 @@ RSpec.describe Menu, type: :model do
   end
 
   it 'can have many menu items' do
-    menu = Menu.new(name: 'Steak Dinner')
-    MenuItemsMenu.create(menu:, menu_item: MenuItem.create(name: 'Ribeye'), price: 25.00)
-    MenuItemsMenu.create(menu:, menu_item: MenuItem.create(name: 'Filet Mignon'), price: 30.00)
+    menu = Menu.new(name: 'Steak Dinner', restaurant: @restaurant)
+    MenuItemsMenu.create!(menu:, menu_item: MenuItem.create!(name: 'Ribeye'), price: 25.00)
+    MenuItemsMenu.create!(menu:, menu_item: MenuItem.create!(name: 'Filet Mignon'), price: 30.00)
     expect(menu.menu_items.size).to eq(2)
   end
 end

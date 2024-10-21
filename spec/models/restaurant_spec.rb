@@ -18,4 +18,11 @@ RSpec.describe Restaurant, type: :model do
     duplicate_restaurant.valid?
     expect(duplicate_restaurant.errors[:name]).to include('has already been taken')
   end
+
+  it 'can have many menus' do
+    restaurant = Restaurant.create!(name: 'Super Place')
+    restaurant.menus.create(name: 'Breakfast')
+    restaurant.menus.create(name: 'Lunch')
+    expect(restaurant.menus.size).to eq(2)
+  end
 end
