@@ -46,5 +46,21 @@ RSpec.describe 'Imports', type: :request do
         expect { post '/import', params: { file: } }.to change(MenuItemsMenu, :count).by(2)
       end
     end
+
+    context 'with duplicated data' do
+      let(:file) { fixture_file_upload('duplicated_menu_items.json', 'application/json') }
+
+      it 'creates one menu items menu' do
+        expect { post '/import', params: { file: } }.to change(MenuItemsMenu, :count).by(1)
+      end
+    end
+
+    context 'with invalid data' do
+      let(:file) { fixture_file_upload('invalid_menu_items.json', 'application/json') }
+
+      it 'returns error message' do
+        expect { post '/import', params: { file: } }.to_not change(MenuItemsMenu, :count)
+      end
+    end
   end
 end

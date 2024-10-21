@@ -1,0 +1,20 @@
+{
+  "restaurants": [
+    {
+      "name": "Pasta La Vista, Baby",
+      "menus": [
+        {
+          "name": "lunch",
+          "menu_items": [
+            {
+              "name": "Burger"
+            },
+            {
+              "price": 9.00
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
