@@ -1,0 +1,32 @@
+{
+  "restaurants": [
+    {
+      "name": "Pasta La Vista, Baby",
+      "menus": [
+        {
+          "name": "lunch",
+          "menu_items": [
+            {
+              "name": "Burger",
+              "price": 9.00
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "The Hungry Hipster",
+      "menus": [
+        {
+          "name": "breakfast",
+          "dishes": [
+            {
+              "name": "Burger",
+              "price": 11.00
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

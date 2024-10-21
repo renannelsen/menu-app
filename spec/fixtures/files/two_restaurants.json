@@ -1,0 +1,79 @@
+{
+  "restaurants": [
+    {
+      "name": "Pasta La Vista, Baby",
+      "menus": [
+        {
+          "name": "lunch",
+          "menu_items": [
+            {
+              "name": "Chickpea Chaat Wrap",
+              "price": 9.00
+            },
+            {
+              "name": "Pasta Primavera",
+              "price": 12.00
+            }
+          ]
+        },
+        {
+          "name": "dinner",
+          "menu_items": [
+            {
+              "name": "Miso Glazed Salmon",
+              "price": 22.00
+            },
+            {
+              "name": "Stuffed Portobello Mushrooms",
+              "price": 16.00
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "The Hungry Hipster",
+      "menus": [
+        {
+          "name": "breakfast",
+          "dishes": [
+            {
+              "name": "Avocado Toast Extravaganza",
+              "price": 11.00
+            },
+            {
+              "name": "Granola Parfait",
+              "price": 9.00
+            }
+          ]
+        },
+        {
+          "name": "lunch",
+          "dishes": [
+            {
+              "name": "Kale Yeah Salad",
+              "price": 11.00
+            },
+            {
+              "name": "The Hipster Burger",
+              "price": 15.00
+            }
+          ]
+        },
+        {
+          "name": "dinner",
+          "dishes": [
+            {
+              "name": "Zucchini Noodle Bowl",
+              "price": 16.00
+            },
+            {
+              "name": "Coconut Curry Risotto",
+              "price": 18.00
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
