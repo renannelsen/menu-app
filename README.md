@@ -9,6 +9,22 @@ docker compose run --rm web rails db:create db:migrate
 docker compose up
 ```
 
+Running specs
+
+```
+docker compose run --rm web rspec .
+```
+
+### API Routes
+
+```
+GET /menus
+GET /menu_items
+GET /restaurants
+GET /restaurants/:id
+POST /import
+```
+
 ### Importing data
 
 Create a JSON file with the scheme above:
